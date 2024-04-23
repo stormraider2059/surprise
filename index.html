@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @keyframes bounceIn {
+      0% { transform: translateY(-50px) scale(0); opacity: 0; }
+      50% { transform: translateY(0) scale(1.2); }
+      100% { transform: translateY(-50px) scale(1); opacity: 1; }
+    }
+
+
+    .welcome-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.welcome-screen>h1{
+  font-size: 40px;
+  color: rgb(194, 38, 64);
+
+}
+
+    .container {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      position: relative;
+      top: 20vh;
+      
+    }
+
+    .white-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    .rose-message {
+      font-size: 24px;
+      color: #ff69b4;
+      margin-bottom: 10px;
+    }
+
+    #memoriesButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff69b4;
+      color: #fff;
+    }
+
+    #memoriesButton:hover {
+      background-color: #d73e86;
+    }
+  </style>
+</head>
+<body>
+      <!-- Welcome screen -->
+      <div class="welcome-screen">
+        <h1 class="bounce">Welcome, my baby Karuniiiiiii 😙</h1>
+      </div>
+  <div class="container" id="conto">
+
+
+    <!-- Quiz screen -->
+    <div class="quiz-screen" style="display: none;">
+      <!-- Quiz content -->
+      <h2>Are you ready for the surprise? 🥰</h2>
+      <div class="button-container">
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+      </div>
+    </div>
+
+    <!-- Surprise screen -->
+    <div class="surprise-screen" style="display: none;">
+      <!-- Surprise content -->
+      <h2 class="love-message">I love youuuuuuuuuu 💋👇</h2>
+      <button id="surpriseButton">Click for surprise</button>
+    </div>
+
+    <!-- Rose garden -->
+    <div class="rose-garden" style="display: none;">
+      <!-- Rose garden content -->
+      <h1>For you my love 💕</h1>
+      <img src="https://mrbrownbakery.com/image/images/XjLQimuALyBbynZGzK6vKZ65ywyoruRjbl9VByF7.png?p=med" alt="" style="height: 250px; " >
+      <h2 class="rose-message">Me loves you puku 💋</h2>
+      <button id="memoriesButton">Our memories</button>
+    </div>
+
+    <!-- White box for Me loves you puku and Our memories button -->
+    <div class="white-box" style="display: none;">
+      <h2 class="rose-message">Me loves you puku 💋</h2>
+      <button id="memoriesButton">Our memories</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

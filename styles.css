@@ -1,0 +1,118 @@
+/* styles.css */
+
+/* Common styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffe6f2;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-screen, .quiz-screen, .surprise-screen, .rose-garden {
+  display: none;
+}
+
+.pookie-cat, .pookie-heart {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+}
+
+.bounce {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.rose-garden {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.rose-message {
+  font-size: 24px;
+  color: #ff69b4;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff69b4;
+  color: #fff;
+  margin: 0 10px;
+}
+
+button:hover {
+  background-color: #d73e86;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .welcome-screen>h1 {
+    font-size: 40px;
+  }
+
+  .rose-garden {
+    margin-top: 30px;
+  }
+
+  .rose-message {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .welcome-screen>h1 {
+    font-size: 30px;
+  }
+
+  .rose-garden {
+    margin-top: 20px;
+  }
+
+  .rose-message {
+    font-size: 18px;
+  }
+}
+
+
+@media only screen and (max-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .welcome-screen>h1 {
+    font-size: 28px; /* Adjust font size for iPhone 11 screen */
+  }
+}
+
